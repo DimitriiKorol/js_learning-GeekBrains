@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let operation = prompt("Введите название операции:\nsum - сложение\ndif - вычитание\nmult - умножение\ndivision - деление\n");
+
+        let a = +prompt("введит первое число");
+        let b = +prompt("введит второе число");
+        let c;
+
+        function mathOperation(a, b, operation){
+            switch (operation) {
+                case "sum":
+                    c = a + b;
+                    return c;
+                    break;
+                case "dif":
+                    c = a - b;
+                    return c;
+                    break;
+                case "mult":
+                    c = a * b;
+                    return c;
+                    break;
+                case "division":
+                    c = a / b;
+                    return c;
+                    break;
+            }
+
+        }
+
+        alert(mathOperation(a, b, operation));
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let a = -3, b = 5;
+        let c;
+
+        if (a >= 0 && b >= 0) {
+            c = a - b;
+        } else if (a < 0 && b < 0) {
+            c = a * b;
+        } else if (Math.sign(a) != Math.sign(b)){ //(Math.sign(a) >= 0 && Math.sign(b) <0 || Math.sign(a) < 0 && Math.sign(b) >= 0) - более точное условие на мой взгляд, но сильно перегружено
+            c = a + b;
+        } else {
+            c = "WTF?" //что-то пошло не так
+        }
+
+        alert(c);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        'use strict';
+        let amount = prompt("Введите сумму, которую хотите положить на счет в банке:");
+        let last = amount.slice(-1);
+        let ending;
+
+        if (+amount > 10 && +amount < 15) {
+            ending = "рублей";
+        } else {
+            switch (last) {
+                case "1":
+                    ending = "рубль";
+                    break;
+                case "2":
+                case "3":
+                case "4":
+                    ending = "рубля";
+                    break;
+                default:
+                    ending = "рублей";
+                    break;
+            }
+        }
+
+
+
+        alert("Ваша сумма " + amount +" "+ ending + " успешно зачислена.");
+
+
+    </script>
+
+</body>
+</html>
