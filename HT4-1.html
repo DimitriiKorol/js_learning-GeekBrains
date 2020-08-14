@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let number = +prompt("Введите целое число от 0 до 999");
+
+        function Convert (number) {
+            if (number == NaN || number < 0 || number > 999) {
+                console.log("Вы ввели неверные данные");
+                return null;
+            } else if (!Number.isInteger(number)) {
+                console.log("Вы ввели не целое число");
+                return null;
+            }
+
+            this.units = Math.floor(number % 10);
+            this.tens = Math.floor(number / 10);
+            this.hundreds = Math.floor(number / 100);
+        }
+
+        let numers = new Convert(number);
+        console.log(numers.units + " - это единицы");
+        console.log(numers.tens + " - это десятки");
+        console.log(numers.hundreds + " - это сотни");
+        console.log(numers);
+
+
+
+    </script>
+</body>
+</html>

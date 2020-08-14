@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        //Стандарт ES5
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function(text) {
+            this.text = text;
+        }
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            //Object.getPrototypeOf(AttachedPost.prototype).constructor.call(this); - подсмотрел в инете, но не разобрался как работает
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function() {
+            this.highlighted = true;
+        }
+
+        let art1 = new Post("Martin", "Lorem ipsum dolor sit amet, consectetur adipisicing.", 1971);
+        art1.edit("Lorem ipsum dolor sit amet.");
+
+        console.log(art1);
+
+        let art2 = new AttachedPost("Martin", "Lorem ipsum dolor sit amet, consectetur adipisicing.", 1971);
+        art2.edit("Lorem ipsum dolor sit amet.");
+        art2.makeTextHighlighted();
+
+        console.log(art2);
+
+    </script>
+</body>
+</html>
