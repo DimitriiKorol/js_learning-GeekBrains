@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: 200px;
+}
+
+.nums {
+
+}
+
+.letters {
+
+}
+
+.whiteCell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    margin: 0;
+}
+
+.blackCell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    margin: 0;
+}
+
+.begin {
+
+}
+
+.genButton {
+
+}
